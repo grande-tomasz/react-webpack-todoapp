@@ -67,15 +67,29 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var log = __webpack_require__(1);
-log("hello world");
+"use strict";
 
+
+var _log = __webpack_require__(1);
+
+var _log2 = _interopRequireDefault(_log);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(0, _log2.default)("hello world"); // var log = require("./log");
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = console.log;
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// module.exports = console.log;
+exports.default = console.log;
 
 /***/ })
 /******/ ]);
