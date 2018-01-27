@@ -13,7 +13,9 @@ let plugins = [
   })
 ];
 
+console.log("NODE_ENV:", env);
 if(env === "PROD") {
+  console.log("optimize plugins included");
   plugins.push(
     new webpack.optimize.UglifyJsPlugin(),
     // new UglifyJsPlugin(),
@@ -23,10 +25,11 @@ if(env === "PROD") {
   );
 }
 
-console.log("NODE_ENV:", env);
-
 module.exports = {
-  entry: "./src/index.js",
+  entry: [
+    "react-hot-loader/patch",
+    "./src/index.js"
+  ],
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "app.bundle.js"
