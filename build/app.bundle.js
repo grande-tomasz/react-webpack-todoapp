@@ -8680,13 +8680,13 @@ var ToDoList = exports.ToDoList = function ToDoList(props) {
   var reactItems = props.items.map((function (item) {
     return _react2.default.createElement(
       "li",
-      {
-        key: item.id
-        // onClick={props.remove(item.id)}
-      },
+      { key: item.id, onClick: function onClick() {
+          return props.remove(item.id);
+        } },
       item.text
     );
   }));
+
   return _react2.default.createElement(
     "ul",
     { className: "itemsList" },
