@@ -1,0 +1,11 @@
+.ToDo {
+  display: block;
+  padding: 1rem;
+  list-style: none;
+  border: 1px solid black;
+  background-color: #CCCCCC;
+  color: black;
+}
+.ToDo:hover {
+  cursor: pointer;
+}
