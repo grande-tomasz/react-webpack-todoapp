@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
+    "build:prod": "set NODE_ENV=PROD && webpack",
     "start": "webpack-dev-server --inline --hot --config ./webpack.config.js"
   },
   "keywords": [],

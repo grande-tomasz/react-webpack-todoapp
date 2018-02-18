@@ -14,6 +14,7 @@ let plugins = [
 ];
 
 console.log("NODE_ENV:", env);
+// the below condition is not triggered despite the fact that NODE_ENV=PROD
 if(env === "PROD") {
   console.log("optimize plugins included");
   plugins.push(

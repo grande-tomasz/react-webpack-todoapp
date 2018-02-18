@@ -1,0 +1,7 @@
+.ToDoForm {
+  border: 1px solid black;
+  background-color: #CCCCCC;
+}
+.ToDoForm input {
+  font-size: 1.5rem;
+}
