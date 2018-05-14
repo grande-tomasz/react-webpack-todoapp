@@ -15,7 +15,7 @@ let plugins = [
 
 console.log("NODE_ENV:", env);
 // the below condition is not triggered despite the fact that NODE_ENV=PROD
-if(env === "PROD") {
+if (env === "PROD") {
   console.log("optimize plugins included");
   plugins.push(
     new webpack.optimize.UglifyJsPlugin(),
@@ -27,12 +27,9 @@ if(env === "PROD") {
 }
 
 module.exports = {
-  entry: [
-    "react-hot-loader/patch",
-    "./src/index.js"
-  ],
+  entry: ["react-hot-loader/patch", "./src/index.js"],
   output: {
-    path: path.resolve(__dirname, "build"),
+    path: path.resolve(__dirname, "docs"),
     filename: "app.bundle.js"
   },
   module: {
